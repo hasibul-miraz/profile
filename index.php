@@ -11,7 +11,7 @@
         if ($handle = opendir('./source/')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    echo $entry;
+                    echo '<a href="./source/'.$entry.'/index.html">'.$entry.'</a>';
                 }
             }
             closedir($handle);
